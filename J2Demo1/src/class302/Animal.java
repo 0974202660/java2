@@ -3,13 +3,16 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package j2demo1;
+package class302;
+
+import demo1_2.*;
+import j2demo1.*;
 
 /**
  *
  * @author minhdq
  */
-public abstract class Animal {
+public class Animal {
     // trường / thuộc tính
     private String name;
     private int weight;
@@ -45,13 +48,24 @@ public abstract class Animal {
         this.high = high;
     }
 
-    public String showInfo(){
-        return this.getName()+"\t" + this.getHigh()+"\t\t"  + this.getWeight()+"\t" ;
+    
+    
+    
+    
+    public void showInfo(){
+        
+        System.out.println("Name\t : "+this.getName());
+        System.out.println("High\t : "+this.getHigh());
+        System.out.println("Weight\t : "+this.getWeight());
+        
+        System.out.println("");
     }
-    public abstract  String eat();
-    public String move(){
-        return "Di chuyển : Đi, chạy";
+    public void eat(){
+        System.out.println("Động vật ăn thịt !");
     }
-    public abstract String hinhDang();// phương thức trừu tượng
+    public void move(){
+        System.out.print("Di chuyển : Đi, chạy"); // bò, bay, nhẩy, bơi ...
+    }
+    
    
 }

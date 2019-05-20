@@ -3,7 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package j2demo1;
+package mobb1357;
+
+import class302.*;
+import demo1_2.*;
+import j2demo1.*;
 
 /**
  *
@@ -45,13 +49,18 @@ public abstract class Animal {
         this.high = high;
     }
 
-    public String showInfo(){
-        return this.getName()+"\t" + this.getHigh()+"\t\t"  + this.getWeight()+"\t" ;
+    public void showInfo(){
+        
+        System.out.println("Name\t : "+this.getName());
+        System.out.println("High\t : "+this.getHigh());
+        System.out.println("Weight\t : "+this.getWeight());
+        
+        System.out.println("");
     }
-    public abstract  String eat();
-    public String move(){
-        return "Di chuyển : Đi, chạy";
+    public abstract String eat();
+    public void move(){
+        System.out.print("Di chuyển : Đi, chạy"); // bò, bay, nhẩy, bơi ...
     }
-    public abstract String hinhDang();// phương thức trừu tượng
+    
    
 }

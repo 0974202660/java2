@@ -3,7 +3,8 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package j2demo1;
+package class3034;
+
 
 /**
  *
@@ -18,25 +19,26 @@ public class Duck extends Animal{
         this.tail = tail;
         this.legs = legs;
     }
-    public Duck(String name, int weight, int high) {
-        super(name, weight, high);
-    }
+    
     
     @Override
-    public String showInfo(){
-        return super.showInfo() + this.getTail()+"\t"  + this.getLegs()+"\t" + this.hinhDang()+"\t" + this.eat()+"\t" + this.move();
+    public void showInfo(){
+        System.out.println("Tail\t : "+this.getTail());
+        System.out.println("Legs\t : "+this.getLegs());
+        super.showInfo();
+        
     }
-    
     
     @Override
     public String eat(){
         return "Duck Động vật ăn cỏ !";
     }
     @Override
-    public String move(){
+    public void move(){
         //super gọi pthuc lớp cha
-        return super.move() + "hoặc bơi, lặn ...";
-        
+        System.out.println("");
+        super.move();
+        System.out.println(" hoặc bơi, lặn ...");
     }
     
     public void bark(){
@@ -46,7 +48,9 @@ public class Duck extends Animal{
         return tail;
     }
 
-    
+    public Duck(String name, int weight, int high) {
+        super(name, weight, high);
+    }
 
     public void setTail(int tail) {
         this.tail = tail;
@@ -59,14 +63,5 @@ public class Duck extends Animal{
     public void setLegs(int legs) {
         this.legs = legs;
     }
-
-    @Override
-    public String hinhDang() {
-         if(getWeight()>3){
-            return "To Tướng";
-        }else{
-            return "Bé Bình Thường";
-        }
-    }
-
+    
 }
