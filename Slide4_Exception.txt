@@ -1,0 +1,28 @@
+	
+	Nếu bạn không thể lường trước toàn bộ lỗi,ta có thể đặt mặc định Exception để xử lý lỗi mà bạn chưa tính đến được.
+
+1. Kịch bản ArithmeticException xảy ra
+Nếu chúng ta chia bất kỳ số nào cho số 0, xảy ra ngoại lệ ArithmeticException.
+int a=50/0;//ArithmeticException
+
+2. Kịch bản NullPointerException xảy ra
+Nếu chúng ta có bất kỳ biến nào có giá trị null , thực hiện bất kỳ hoạt động nào bởi biến đó sẽ xảy ra ngoại lệ NullPointerException.
+String s=null;  
+System.out.println(s.length());//NullPointerException
+
+3. Kịch bản NumberFormatException xảy ra
+Sự định dạng sai của bất kỳ giá trị nào, có thể xảy ra NumberFormatException. Giả sử ta có một biến String có giá trị là các ký tự, chuyển đổi biến này thành số sẽ xảy ra NumberFormatException
+String s="abc";
+int i=Integer.parseInt(s);//NumberFormatException  
+
+4. Kịch bản ArrayIndexOutOfBoundsException xảy ra
+Nếu bạn chèn bất kỳ giá trị nào vào index sai, sẽ xảy ra ngoại lệ ArrayIndexOutOfBoundsException như thể hiện dưới đây:
+int a[]=new int[5];  
+a[10]=50; //ArrayIndexOutOfBoundsException  
+
+Có 5 từ khóa được sử dụng để xử lý ngoại lệ trong java:
+try
+catch
+finally
+throw
+throws
