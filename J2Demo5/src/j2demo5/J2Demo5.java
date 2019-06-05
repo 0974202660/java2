@@ -21,7 +21,7 @@ public class J2Demo5 {
         // TODO code application logic here
         try {
  
-            File file = new File("newfile308.txt");
+            File file = new File("newfile357.txt");
  
             if (file.createNewFile()) {
                 System.out.println("File is created!");

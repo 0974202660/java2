@@ -25,7 +25,7 @@ public class DataOutputExample {
    dos.writeDouble(9.5);
 
    //Bước 3: Đóng luồng
-   fos.flush();
+   fos.flush();//
    fos.close();
    dos.flush();
    dos.close();
