@@ -16,11 +16,11 @@ public class SinhVien {
     private String masv, hoten;
     private double diem;
 
-    public SinhVien() {
-        this.masv = "PH99999";
-        this.hoten = "Siêu Nhân Trượt";
-        this.diem = 4.9;
-    }
+//    public SinhVien() {
+//        this.masv = "PH99999";
+//        this.hoten = "Siêu Nhân Trượt";
+//        this.diem = 4.9;
+//    }
 
     public SinhVien(String masv, String hoten, double diem) {
         this.masv = masv;

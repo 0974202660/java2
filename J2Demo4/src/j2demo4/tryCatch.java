@@ -10,7 +10,7 @@ package j2demo4;
  * @author minhdq
  */
 public class tryCatch {
-    public static void main02 (String args[]) {
+    public static void main01(String args[]) {
         int data = 50 / 0;  // ném ra ngoại lê ở đây
         System.out.println(data);
         System.out.println("Lỗi rồi in ra đc ko ?...");
@@ -22,7 +22,7 @@ public class tryCatch {
             // code xử lý ngoại lệ
         }  
         */
-    public static void main01(String[] args) {
+    public static void main11(String[] args) {
         try {
             int data = 50 / 0;
         } catch (ArithmeticException e) {
@@ -39,11 +39,11 @@ public class tryCatch {
         ví dụ: việc bắt ArithimeticExption phải ở trước việc bắt Exception.
         */
         try{  
-        int a[]=new int[5];
+        int a[]=new int[5];//
         a[10] = 10;
         a[5]=30/0;
         
-        }  
+        } 
         catch(ArithmeticException e){
             System.out.println(e);
             System.out.println("Task1 duoc hoan thanh");
@@ -51,11 +51,10 @@ public class tryCatch {
         catch(ArrayIndexOutOfBoundsException e){
             System.out.println(e);
             System.out.println("Task2 duoc hoan thanh");
-        } 
+        }
         catch(Exception e){
             System.out.println("Task chung duoc hoan thanh");
-        }  
-  
+        }
         System.out.println("Phan code con lai...");  
     }
 }   

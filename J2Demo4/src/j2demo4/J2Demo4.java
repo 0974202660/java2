@@ -14,7 +14,7 @@ public class J2Demo4 {
     /**
      * @param args the command line arguments
      */
-    public static void main01(String[] args) {
+    public static void main99(String[] args) {
         // TODO code application logic here
         try {
               //Những khối lệnh có thể phát sinh lỗi

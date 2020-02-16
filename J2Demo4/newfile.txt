@@ -1,0 +1,3 @@
+Mục đích là phân tách khối xử lý ngoại lệ ra khỏi khối xử lý chính, giúp quản lý rõ ràng hơn. Bên cạnh đó, thay vì bạn return -1, -2 bla bla khó quản lý thì nó giúp lưu trữ một cách cụ thể thông tin ngoại lệ, cho phép bạn throw ngoại lệ ra nhiều cấp cho tới khi đến vị trí có thể xử lý. Nó là một cách quản lý tốt hơn, vậy thôi.
+
+Nhiều bạn dẽ bị nhầm giữa lỗi (Error) và ngoại lệ (Exception). Thông thường ta chỉ tạo lớp của Exception chứ không tạo Error. Exception là trường hợp ngoại lệ, ví dụ như thay vì return -1 trong trường họp đầu vào không hợp lệ (Không tồn tại file trong hàm đọc file chẳng hạn) thì ta quăng exception. Còn error là thứ ta không quản lý được, chẳng hạn như tràn vùng nhớ stack.

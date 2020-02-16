@@ -6,12 +6,13 @@
 package poly;
 
 import java.util.ArrayList;
+import java.util.List;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
 public class UD1 extends javax.swing.JFrame {
 
-    ArrayList<SinhVien> listSV = new ArrayList<>();
+    List<SinhVien> listSV = new ArrayList<>();
     int vitri;
     DefaultTableModel model = new DefaultTableModel();
     
@@ -23,6 +24,7 @@ public class UD1 extends javax.swing.JFrame {
         listSV.add(new SinhVien("PH00345", "Đừng Gọi Tôi", 7.9));
         listSV.add(new SinhVien("PH00456", "Nằm Gì Lắm", 8.9));
         addTable(); //Dua du lieu vao Table
+        
         if (listSV.size() >= 2) {
             vitri = 0;
             display(vitri);
@@ -174,9 +176,9 @@ public class UD1 extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(btnDau)
-                        .addGap(2, 2, 2)
-                        .addComponent(btnTruoc)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnTruoc)
+                        .addGap(2, 2, 2)
                         .addComponent(lblHienTai, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(btnSau)
@@ -272,7 +274,8 @@ public class UD1 extends javax.swing.JFrame {
 
     private void tblSinhvienMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblSinhvienMouseClicked
         try {
-            int row=tblSinhvien.getSelectedRow();//Lay dong dang chon cua Table
+            int row=tblSinhvien.getSelectedRow();
+    //Lay dong dang chon cua Table
             if(row>=0){
                 vitri=row;
                 display(vitri);
